@@ -1,9 +1,9 @@
-material|temp 		| glass |cover 	|speed/fl|retract	|colling	|min layer time  		|
-abs+ 	|	205     |  100	|	65	|80/15   |6mm		|20%		|10s/10 lift head on    | metal
-pla 	|	195/65 	| 75	| 	50	|80/15   |5mm		|+			|						|
-pla+ 	|	217/75  | 85	| 		|80/15   |5mm		|+
-abs flex|	245     | 100	|		|40/15   |8mm		|+/-		|						|metal
-coPET 	|	230     | 100	|		|40/15   |8mm		|50%
+material|temp 	 | glass |cover 	|speed/fl|retract	|colling	|min layer time  		|
+abs+ 	|	205  |  100	|	65	|80/15   |6.5		|20%		|10s/10 lift head on    | metal
+pla 	|	195  | 75	| 	50	|80/15   |5mm		|+			|						|
+pla+ 	|	217  | 85	| 		|80/15   |5mm		|+
+abs flex|	245  | 100	|		|40/15   |8mm		|+/-		|						|metal
+coPET 	|	230  | 100	|		|40/15   |8mm		|50%
 
 accesleration 800
 jerk 10
@@ -35,18 +35,19 @@ G91;G0 Z+15 F3000;G90;G0 X0 Y216
 
 
 [3d] 
+https://files.fieldofview.com/cura/Replacement_Patterns.html
 GStart CURA:
 
 M80 ; poweron
 M140 S{material_bed_temperature_layer_0} ;Start heating bed
 M190 S{material_bed_temperature_layer_0} ;Wait for bed to reach temp before proceeding
 M118 //action:beforeHome
-M104 S{material_print_temperature_layer_0} ;Start heating extruder
+M104 S{material_initial_print_temperature} ;Start heating extruder
 G28 ;home
 G21 ;metric values
 M118 //action:afterHome
 M118 //action:nozzleCleanPos
-M109 S{material_print_temperature_layer_0} ;Wait for extruder to reach temp before
+M109 S{material_initial_print_temperature} ;Wait for extruder to reach temp before
 M118 //action:nozzleClean
 M420 S1;on bed level
 G90 ;absolute positioning
@@ -256,3 +257,12 @@ G90;G0 Z10 F1500;G0 X0 Y-18;G0 Z4
 nozzleClean 
 G91;G1 F50 E15;G0 E-3 F20;G1 Y10 F500;G90;G0 Z10 F9000;G0 X30 Y30 F9000
 
+[flatcam]
+setut from  exe
+set_sys excellon_zeros T
+https://www.youtube.com/watch?v=93y_d55sr5A&ab_channel=MattWestwick
+
+[wifi]
+https://github.com/cilynx/rtl88x2bu
+ /boot/config.txt.
+ dtoverlay=disable-wifi #disable internal wifi
