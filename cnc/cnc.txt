@@ -1,0 +1,22 @@
+https://github.com/makerbase-mks/MKS-DLC32
+https://github.com/vlachoudis/bCNC
+python -m bCNC
+https://bitbucket.org/jpcgt/flatcam/downloads/
+
+[config]
+$3=7
+$100=1600
+$101=1600
+$102=3200
+$110=600
+$111=600
+$112=300
+
+RPM:20000
+cooper 0.035
+mill 2mm
+tool     |feed XY |feedZ | isolaion
+0.2x25   | 200    |144
+0.2x15   | 200    |144  |.22x2
+drill    | 200    |100
+mill     | 100    |144
