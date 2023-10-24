@@ -1,8 +1,8 @@
 material|temp 	 | glass |cover 	|speed/fl|retract	|colling	|min layer time  		|
-abs+ 	|	205  |  100	|	65	|80/15   |6.5		|20%		|10s/10 lift head on    | metal
-pla 	|	195  | 75	| 	50	|80/15   |5mm		|+			|						|
-pla+ 	|	217  | 85	| 		|80/15   |5mm		|+
-abs flex|	245  | 100	|		|40/15   |8mm		|+/-		|						|metal
+abs+ 	|	205  |  100	 |	65	|80/15   |6.5		|20%		|10s/10 lift head on    | metal
+pla 	|	195  | 75	 | 	50	|80/15   |5mm		|+			|						|
+pla+ 	|	217  | 85	 | 		|80/15   |5mm		|+
+abs flex|	245  | 100   |		|40/15   |8mm		|+/-		|						|metal
 coPET 	|	230  | 100	|		|40/15   |8mm		|50%
 
 accesleration 800
@@ -137,12 +137,7 @@ https://copper.carbide3d.com/
 https://www.instructables.com/PCB-Milling-Using-a-3D-Printer/
 
 
-RPM:15000
-tool     |feed XY |feedZ 
-0.2x25   | 200    |144
-0.2x15   | 200    |144  bad
-drill    | 200    |100
-mill     | 100    |144
+
 
 
 
