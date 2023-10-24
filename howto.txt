@@ -11,12 +11,6 @@ jerk 10
 
 C:\Program Files\Cura 2.6\resources\materials
 
-[pcb]
-Z doun -0.2
-15000 rpm
-bit 02
-speed xyz F120.00
-
 [ocptoprint:action]
 beforeHome
 M666 Z0.62

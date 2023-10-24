@@ -1,7 +1,10 @@
+socket://192.168.1.11:8080
+
 https://github.com/makerbase-mks/MKS-DLC32
 https://github.com/vlachoudis/bCNC
 python -m bCNC
 https://bitbucket.org/jpcgt/flatcam/downloads/
+https://github.com/luc-github/ESP3D-WEBUI
 
 [config]
 $3=7
@@ -14,9 +17,9 @@ $112=300
 
 RPM:20000
 cooper 0.035
-mill 2mm
+
 tool     |feed XY |feedZ | isolaion
 0.2x25   | 200    |144
-0.2x15   | 200    |144  |.22x2
-drill    | 200    |100
-mill     | 100    |144
+0.2x15   | 200    |144  |z=-0.045
+drill    | 200    |100| z=-2
+mill     | 50    |60 |z=-1.8
