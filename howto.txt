@@ -178,7 +178,12 @@ pip install "https://github.com/costas-basdekis/MarlinGcodeDocumentation/archive
 pip install "https://github.com/quanticchaos/OctoPrint-Webcamsb/archive/master.zip"
 
 [multicam]
-https://www.youtube.com/watch?v=SdDq1wfTn0A&ab_channel=ChrisRiley
+https://community.octoprint.org/t/setting-up-multiple-webcams-in-octopi-the-right-way/32669
+
+$  ls  /dev/v4l/by-id/
+usb-046d_081b_3CB290A0-video-index0  usb-046d_081b_3CB290A0-video-index1
+http://192.168.1.10:8080/?action=snapshot
+
 
 $ cd /root/bin/
 sudo cp webcamd webcamd2
@@ -239,5 +244,5 @@ https://www.youtube.com/watch?v=93y_d55sr5A&ab_channel=MattWestwick
 
 [wifi]
 https://github.com/cilynx/rtl88x2bu
- /boot/config.txt.
+ /boot/config.txt
  dtoverlay=disable-wifi #disable internal wifi
