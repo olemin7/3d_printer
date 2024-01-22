@@ -244,5 +244,6 @@ https://www.youtube.com/watch?v=93y_d55sr5A&ab_channel=MattWestwick
 
 [wifi]
 https://github.com/cilynx/rtl88x2bu
- /boot/config.txt
- dtoverlay=disable-wifi #disable internal wifi
+/boot/config.txt
+#disable internal wifi
+dtoverlay=disable-wifi 
