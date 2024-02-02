@@ -1,0 +1,9 @@
+.pio
+secret.h
+wifi.json
+.cproject
+.settings/
+lib/
+pcb/*.s#*
+pcb/*.b#*
+CAMOutputs/
