@@ -247,3 +247,5 @@ https://github.com/cilynx/rtl88x2bu
 /boot/config.txt
 #disable internal wifi
 dtoverlay=disable-wifi 
+
+https://github.com/bigtreetech/SKR-2/tree/master/Hardware

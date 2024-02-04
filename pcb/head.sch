@@ -556,6 +556,89 @@
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-PowerSymbols" urn="urn:adsk.eagle:library:530">
+<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
+This library contains power, ground, and voltage-supply symbols.
+&lt;br&gt;
+&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
+&lt;br&gt;
+&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
+&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;
+&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="DGND" urn="urn:adsk.eagle:symbol:39415/2" library_version="2">
+<description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="0" y="-0.254" size="1.778" layer="96" font="vector" align="top-center">&gt;VALUE</text>
+</symbol>
+<symbol name="VCC" urn="urn:adsk.eagle:symbol:39418/2" library_version="2">
+<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" font="vector" align="bottom-center">&gt;VALUE</text>
+</symbol>
+<symbol name="5V" urn="urn:adsk.eagle:symbol:39412/2" library_version="2">
+<description>&lt;h3&gt;5V Voltage Supply&lt;/h3&gt;</description>
+<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
+<pin name="5V" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
+<text x="0" y="2.794" size="1.778" layer="96" font="vector" align="bottom-center">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:39439/2" prefix="GND" library_version="2">
+<description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
+<gates>
+<gate name="1" symbol="DGND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCC" urn="urn:adsk.eagle:component:39449/2" prefix="SUPPLY" library_version="2">
+<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;
+&lt;p&gt;Positive voltage supply (traditionally for a BJT device, C=collector).&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="5V" urn="urn:adsk.eagle:component:39433/2" prefix="SUPPLY" library_version="2">
+<description>&lt;h3&gt;5V Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Power supply symbol for a specifically-stated 5V source.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="5V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 <library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">
 <description>&lt;h3&gt;SparkFun Connectors&lt;/h3&gt;
 This library contains electrically-functional connectors. 
@@ -1961,68 +2044,6 @@ part number 2062-2P from STA</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-PowerSymbols" urn="urn:adsk.eagle:library:530">
-<description>&lt;h3&gt;SparkFun Power Symbols&lt;/h3&gt;
-This library contains power, ground, and voltage-supply symbols.
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="DGND" urn="urn:adsk.eagle:symbol:39415/2" library_version="2">
-<description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
-<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
-<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-<text x="0" y="-0.254" size="1.778" layer="96" font="vector" align="top-center">&gt;VALUE</text>
-</symbol>
-<symbol name="VCC" urn="urn:adsk.eagle:symbol:39418/2" library_version="2">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;</description>
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-<text x="0" y="2.794" size="1.778" layer="96" font="vector" align="bottom-center">&gt;VALUE</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:39439/2" prefix="GND" library_version="2">
-<description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
-&lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
-<gates>
-<gate name="1" symbol="DGND" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="VCC" urn="urn:adsk.eagle:component:39449/2" prefix="SUPPLY" library_version="2">
-<description>&lt;h3&gt;VCC Voltage Supply&lt;/h3&gt;
-&lt;p&gt;Positive voltage supply (traditionally for a BJT device, C=collector).&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="VCC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2035,74 +2056,74 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <parts>
 <part name="SENSOR" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2"/>
 <part name="DUCT0" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
-<part name="DUCT1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="TERMO" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 <part name="JP5" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="JP6" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
+<part name="COOLER" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
+<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device=""/>
+<part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
+<part name="SUPPLY3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="5MM" package3d_urn="urn:adsk.eagle:package:38044/2"/>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="5MM" package3d_urn="urn:adsk.eagle:package:38044/2"/>
-<part name="COOLER" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
-<part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="GND3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="SUPPLY1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device=""/>
-<part name="SUPPLY2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="VCC" device=""/>
+<part name="DUCT1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X2" device="" package3d_urn="urn:adsk.eagle:package:22435/2"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="SENSOR" gate="A" x="66.04" y="83.82" smashed="yes">
-<attribute name="NAME" x="59.69" y="89.535" size="1.778" layer="95"/>
-<attribute name="VALUE" x="59.69" y="76.2" size="1.778" layer="96"/>
+<instance part="SENSOR" gate="A" x="66.04" y="91.44" smashed="yes">
+<attribute name="NAME" x="59.69" y="97.155" size="1.778" layer="95"/>
+<attribute name="VALUE" x="59.69" y="83.82" size="1.778" layer="96"/>
 </instance>
-<instance part="DUCT0" gate="G$1" x="76.2" y="58.42" smashed="yes">
-<attribute name="NAME" x="69.85" y="64.135" size="1.778" layer="95"/>
-<attribute name="VALUE" x="69.85" y="53.34" size="1.778" layer="96"/>
+<instance part="DUCT0" gate="G$1" x="66.04" y="63.5" smashed="yes">
+<attribute name="NAME" x="59.69" y="69.215" size="1.778" layer="95"/>
+<attribute name="VALUE" x="59.69" y="58.42" size="1.778" layer="96"/>
 </instance>
-<instance part="DUCT1" gate="G$1" x="58.42" y="58.42" smashed="yes">
-<attribute name="NAME" x="52.07" y="64.135" size="1.778" layer="95"/>
-<attribute name="VALUE" x="52.07" y="53.34" size="1.778" layer="96"/>
+<instance part="TERMO" gate="G$1" x="48.26" y="81.28" smashed="yes">
+<attribute name="NAME" x="41.91" y="86.995" size="1.778" layer="95"/>
+<attribute name="VALUE" x="41.91" y="76.2" size="1.778" layer="96"/>
 </instance>
-<instance part="TERMO" gate="G$1" x="66.04" y="96.52" smashed="yes">
-<attribute name="NAME" x="59.69" y="102.235" size="1.778" layer="95"/>
-<attribute name="VALUE" x="59.69" y="91.44" size="1.778" layer="96"/>
+<instance part="JP5" gate="A" x="-5.08" y="86.36" smashed="yes" rot="MR0">
+<attribute name="NAME" x="1.27" y="94.615" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="1.27" y="78.74" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="JP5" gate="A" x="2.54" y="86.36" smashed="yes" rot="R180">
-<attribute name="NAME" x="8.89" y="78.105" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="8.89" y="93.98" size="1.778" layer="96" rot="R180"/>
+<instance part="JP6" gate="A" x="-5.08" y="60.96" smashed="yes" rot="MR0">
+<attribute name="NAME" x="1.27" y="69.215" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="1.27" y="53.34" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="JP6" gate="A" x="2.54" y="58.42" smashed="yes" rot="R180">
-<attribute name="NAME" x="8.89" y="50.165" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="8.89" y="66.04" size="1.778" layer="96" rot="R180"/>
+<instance part="COOLER" gate="G$1" x="63.5" y="33.02" smashed="yes">
+<attribute name="NAME" x="57.15" y="38.735" size="1.778" layer="95"/>
+<attribute name="VALUE" x="57.15" y="27.94" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="J1" x="68.58" y="20.32" smashed="yes" rot="R180">
-<attribute name="VALUE" x="71.12" y="25.146" size="1.778" layer="96" font="vector" rot="R180"/>
-<attribute name="NAME" x="71.12" y="14.732" size="1.778" layer="95" font="vector" rot="R180"/>
+<instance part="GND2" gate="1" x="55.88" y="81.28" smashed="yes">
+<attribute name="VALUE" x="53.34" y="81.026" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="J2" gate="J1" x="22.86" y="22.86" smashed="yes">
-<attribute name="VALUE" x="20.32" y="18.034" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="20.32" y="28.448" size="1.778" layer="95" font="vector"/>
+<instance part="SUPPLY2" gate="G$1" x="12.7" y="71.12" smashed="yes">
+<attribute name="VALUE" x="12.7" y="73.914" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
-<instance part="COOLER" gate="G$1" x="58.42" y="45.72" smashed="yes">
-<attribute name="NAME" x="52.07" y="51.435" size="1.778" layer="95"/>
-<attribute name="VALUE" x="52.07" y="40.64" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="17.78" y="78.74" smashed="yes">
+<attribute name="VALUE" x="17.78" y="78.486" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="GND1" gate="1" x="22.86" y="76.2" smashed="yes">
-<attribute name="VALUE" x="22.86" y="75.946" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="SUPPLY1" gate="G$1" x="7.62" y="71.12" smashed="yes">
+<attribute name="VALUE" x="7.62" y="73.914" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
-<instance part="GND2" gate="1" x="55.88" y="76.2" smashed="yes">
-<attribute name="VALUE" x="55.88" y="75.946" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="SUPPLY3" gate="G$1" x="55.88" y="96.52" smashed="yes">
+<attribute name="VALUE" x="55.88" y="99.314" size="1.778" layer="96" font="vector" align="bottom-center"/>
 </instance>
-<instance part="GND3" gate="1" x="55.88" y="91.44" smashed="yes">
-<attribute name="VALUE" x="55.88" y="91.186" size="1.778" layer="96" font="vector" align="top-center"/>
+<instance part="J1" gate="J1" x="91.44" y="93.98" smashed="yes">
+<attribute name="VALUE" x="88.9" y="89.154" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="88.9" y="99.568" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="17.78" y="93.98" smashed="yes">
-<attribute name="VALUE" x="17.78" y="96.774" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<instance part="J2" gate="J1" x="91.44" y="81.28" smashed="yes">
+<attribute name="VALUE" x="88.9" y="76.454" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="88.9" y="86.868" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="SUPPLY2" gate="G$1" x="15.24" y="66.04" smashed="yes">
-<attribute name="VALUE" x="15.24" y="68.834" size="1.778" layer="96" font="vector" align="bottom-center"/>
+<instance part="DUCT1" gate="G$1" x="78.74" y="63.5" smashed="yes">
+<attribute name="NAME" x="72.39" y="69.215" size="1.778" layer="95"/>
+<attribute name="VALUE" x="72.39" y="58.42" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -2110,120 +2131,110 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <nets>
 <net name="N$3" class="0">
 <segment>
-<pinref part="TERMO" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="99.06" x2="35.56" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="99.06" x2="35.56" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="JP5" gate="A" pin="3"/>
-<wire x1="5.08" y1="86.36" x2="35.56" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="SENSOR" gate="A" pin="2"/>
-<wire x1="5.08" y1="83.82" x2="63.5" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="JP5" gate="A" pin="2"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<pinref part="TERMO" gate="G$1" pin="2"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="63.5" y1="96.52" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="96.52" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="SENSOR" gate="A" pin="3"/>
-<wire x1="55.88" y1="78.74" x2="55.88" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="81.28" x2="63.5" y2="81.28" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="22.86" y1="78.74" x2="22.86" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="JP5" gate="A" pin="4"/>
-<wire x1="22.86" y1="88.9" x2="5.08" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="86.36" x2="35.56" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="TERMO" gate="G$1" pin="1"/>
+<wire x1="45.72" y1="83.82" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="83.82" x2="35.56" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="SENSOR" gate="A" pin="1"/>
-<wire x1="63.5" y1="86.36" x2="45.72" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="86.36" x2="45.72" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="JP5" gate="A" pin="1"/>
-<wire x1="45.72" y1="81.28" x2="15.24" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="15.24" y1="81.28" x2="5.08" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="81.28" x2="15.24" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="93.98" x2="17.78" y2="93.98" width="0.1524" layer="91"/>
-<junction x="15.24" y="81.28"/>
-</segment>
-<segment>
-<pinref part="JP6" gate="A" pin="3"/>
-<wire x1="5.08" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="58.42" x2="40.64" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="58.42" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="DUCT1" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="60.96" x2="55.88" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="DUCT0" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="60.96" x2="66.04" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="60.96" x2="66.04" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="68.58" x2="40.64" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="68.58" x2="40.64" y2="60.96" width="0.1524" layer="91"/>
-<junction x="40.64" y="60.96"/>
 <pinref part="JP6" gate="A" pin="1"/>
-<wire x1="5.08" y1="53.34" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="COOLER" gate="G$1" pin="1"/>
-<wire x1="17.78" y1="53.34" x2="35.56" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="53.34" x2="35.56" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="48.26" x2="55.88" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="58.42" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
-<junction x="17.78" y="58.42"/>
-<junction x="17.78" y="53.34"/>
-<wire x1="17.78" y1="58.42" x2="17.78" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="66.04" x2="12.7" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="66.04" x2="17.78" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
-<wire x1="17.78" y1="63.5" x2="15.24" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="63.5" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="COOLER" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="45.72" x2="27.94" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="45.72" x2="27.94" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="A" pin="4"/>
-<wire x1="27.94" y1="60.96" x2="5.08" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="71.12" x2="12.7" y2="66.04" width="0.1524" layer="91"/>
+<junction x="12.7" y="66.04"/>
+<pinref part="DUCT0" gate="G$1" pin="1"/>
+<wire x1="63.5" y1="66.04" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="COOLER" gate="G$1" pin="1"/>
+<wire x1="53.34" y1="66.04" x2="12.7" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="35.56" x2="53.34" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="35.56" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
+<junction x="53.34" y="66.04"/>
+<pinref part="DUCT1" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="66.04" x2="63.5" y2="66.04" width="0.1524" layer="91"/>
+<junction x="63.5" y="66.04"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="DUCT1" gate="G$1" pin="2"/>
-<wire x1="55.88" y1="58.42" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="58.42" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="DUCT0" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="58.42" x2="66.04" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="58.42" x2="66.04" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="53.34" x2="48.26" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="53.34" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
-<junction x="48.26" y="55.88"/>
 <pinref part="JP6" gate="A" pin="2"/>
-<wire x1="48.26" y1="55.88" x2="5.08" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="J1" gate="J1" pin="1"/>
-<pinref part="J2" gate="J1" pin="1"/>
-<wire x1="60.96" y1="20.32" x2="30.48" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="20.32" x2="30.48" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="63.5" x2="-2.54" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="DUCT0" gate="G$1" pin="2"/>
+<pinref part="DUCT1" gate="G$1" pin="2"/>
+<wire x1="76.2" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
+<junction x="63.5" y="63.5"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="J1" gate="J1" pin="2"/>
-<wire x1="60.96" y1="17.78" x2="50.8" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="17.78" x2="50.8" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="JP6" gate="A" pin="3"/>
+<wire x1="-2.54" y1="60.96" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="COOLER" gate="G$1" pin="2"/>
+<wire x1="48.26" y1="60.96" x2="48.26" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="33.02" x2="60.96" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$5" class="0">
+<segment>
+<pinref part="TERMO" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="81.28" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="81.28" x2="33.02" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="A" pin="4"/>
+<wire x1="33.02" y1="83.82" x2="-2.54" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="GND" class="0">
+<segment>
+<pinref part="JP5" gate="A" pin="2"/>
+<wire x1="-2.54" y1="88.9" x2="17.78" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="17.78" y1="88.9" x2="17.78" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SENSOR" gate="A" pin="3"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="63.5" y1="88.9" x2="55.88" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="88.9" x2="55.88" y2="83.82" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="5V" class="0">
+<segment>
+<pinref part="JP6" gate="A" pin="4"/>
+<wire x1="-2.54" y1="58.42" x2="7.62" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="5V"/>
+<wire x1="7.62" y1="58.42" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="SENSOR" gate="A" pin="1"/>
+<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
+<wire x1="63.5" y1="93.98" x2="55.88" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="93.98" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="SENSOR" gate="A" pin="2"/>
+<pinref part="JP5" gate="A" pin="1"/>
+<wire x1="63.5" y1="91.44" x2="-2.54" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
 <pinref part="J2" gate="J1" pin="2"/>
-<wire x1="50.8" y1="25.4" x2="30.48" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="J1" gate="J1" pin="1"/>
+<wire x1="99.06" y1="83.82" x2="99.06" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<pinref part="J1" gate="J1" pin="2"/>
+<wire x1="99.06" y1="96.52" x2="104.14" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="96.52" x2="104.14" y2="81.28" width="0.1524" layer="91"/>
+<pinref part="J2" gate="J1" pin="1"/>
+<wire x1="104.14" y1="81.28" x2="99.06" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
