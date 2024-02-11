@@ -90,6 +90,7 @@ M303 C7 E-1 S100 U1 ;bed
 M500 ;save
 
 [calibration size]
+G91 ; Set all axes to relative
 G28 X
 M119; Endstop States
 M120; - Enable Endstops
@@ -97,6 +98,11 @@ M211 S0; dizable Software Endstops
 G92 X0 Y0 Z0
 G0 F1000 X-300
 M114; Get Current Position
+
+M302 P0      ; enable cold extrusion checking
+M302 P1      ; disable cold extrusion checking
+G0 F1000 E100
+M92 E1358
 
 https://teachingtechyt.github.io/calibration.html#accel
 
@@ -146,7 +152,7 @@ git remote add upstream git@github.com:bigtreetech/Marlin.git
 git fetch upstream
 git merge upstream/2.0.x
 git difftool upstream/2.0.x 
-git difftool upstream/bugfix-2.0.x
+git difftool upstream/bugfix-2.1.x
 
 https://docs.platformio.org/en/latest/core/installation.html#super-quick-mac-linux
 https://marlinfw.org/docs/basics/install_platformio_cli.html
@@ -156,7 +162,6 @@ ln -sf ~/personal/repo/unsorted/marlin/skr/Configuration_adv.h .
 
 source deactivate
 source ~/.platformio/penv/bin/activate
-C:\Users\family\.platformio\penv\Scripts\activate
 
 platformio run -e BIGTREE_SKR_2
 
@@ -176,6 +181,7 @@ pip install "https://github.com/Sebclem/OctoPrint-SimpleEmergencyStop/archive/ma
 pip install "https://github.com/benlye/OctoPrint-ActionCommandsPlugin/archive/master.zip"
 pip install "https://github.com/costas-basdekis/MarlinGcodeDocumentation/archive/master.zip"
 pip install "https://github.com/quanticchaos/OctoPrint-Webcamsb/archive/master.zip"
+pip3 install marlin-binary-protocol
 
 [multicam]
 https://community.octoprint.org/t/setting-up-multiple-webcams-in-octopi-the-right-way/32669
