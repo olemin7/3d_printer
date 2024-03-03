@@ -6,15 +6,15 @@ Recv: echo:  M149 C ; Units in Celsius
 Recv: echo:; Filament settings (Disabled):
 Recv: echo:  M200 S0 D1.7500
 Recv: echo:; Steps per unit:
-Recv: echo:  M92 X480.0000 Y480.0000 Z1600.0000 E1381.0000
+Recv: echo:  M92 X160.0000 Y160.0000 Z1600.0000 E1381.0000
 Recv: echo:; Max feedrates (units/s):
 Recv: echo:  M203 X300.0000 Y300.0000 Z5.0000 E25.0000
 Recv: echo:; Max Acceleration (units/s2):
 Recv: echo:  M201 X50000.0000 Y50000.0000 Z100.0000 E10000.0000
 Recv: echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
-Recv: echo:  M204 P1200.0000 R3000.0000 T1200.0000
-Recv: echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
-Recv: echo:  M205 B20000.0000 S0.0000 T0.0000 J0.0130
+Recv: echo:  M204 P2300.0000 R3000.0000 T3000.0000
+Recv: echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_jerk> Y<max_jerk> Z<max_jerk> E<max_jerk>):
+Recv: echo:  M205 B20000.0000 S0.0000 T0.0000 X10.0000 Y10.0000 Z0.4000 E5.0000
 Recv: echo:; Home offset:
 Recv: echo:  M206 X0.0000 Y0.0000 Z0.0000
 Recv: echo:; Auto Bed Leveling:
@@ -36,6 +36,6 @@ Recv: echo:  M851 X0.0000 Y49.0000 Z-16.0000 ; (mm)
 Recv: echo:; Stepper driver current:
 Recv: echo:  M906 X900 Y900
 Recv: echo:; StallGuard threshold:
-Recv: echo:  M914 X90 Y90
+Recv: echo:  M914 X80 Y80
 Recv: echo:; Driver stepping mode:
 Recv: ok P15 B3
