@@ -80,15 +80,21 @@ M500;eeprom save
 
 [calibration]
 M85 S6000; inactive timeout
+=======
+m501;load
 M503; show
 Recv: echo:; PID settings:
 Recv: echo:  M301 P15.58 I0.73 D83.28
 Recv: echo:  M304 P52.15 I8.97 D202.22
 
-M303 C7 E0 S210 U1 ;nozle
-M303 C7 E-1 S100 U1 ;bed
+M106 S70; fan 30%
+M303 C7 E0 S225 U1 ;nozle
+M303 C7 E-1 S85 U1 ;bed
 
 M500 ;save
+
+m914 X60 Y60 ;sensorless
+M906 X1200 Y1200;Stepper driver current
 
 [calibration size]
 G91 ; Set all axes to relative
@@ -159,8 +165,6 @@ git difftool upstream/bugfix-2.1.x
 https://docs.platformio.org/en/latest/core/installation.html#super-quick-mac-linux
 https://marlinfw.org/docs/basics/install_platformio_cli.html
 
-ln -sf ~/personal/repo/unsorted/marlin/skr/Configuration.h .
-ln -sf ~/personal/repo/unsorted/marlin/skr/Configuration_adv.h .
 
 source deactivate
 source ~/.platformio/penv/bin/activate
@@ -257,3 +261,70 @@ https://github.com/cilynx/rtl88x2bu
 dtoverlay=disable-wifi 
 
 https://github.com/bigtreetech/SKR-2/tree/master/Hardware
+==============================================
+Send: M503
+Recv: echo:; Linear Units:
+Recv: echo:  G21 ; (mm)
+Recv: echo:; Temperature Units:
+Recv: echo:  M149 C ; Units in Celsius
+Recv: echo:; Filament settings (Disabled):
+Recv: echo:  M200 S0 D1.7500
+Recv: echo:; Steps per unit:
+Recv: echo:  M92 X160.0000 Y160.0000 Z1600.0000 E1381.0000
+Recv: echo:; Max feedrates (units/s):
+Recv: echo:  M203 X300.0000 Y300.0000 Z5.0000 E25.0000
+Recv: echo:; Max Acceleration (units/s2):
+Recv: echo:  M201 X3000.0000 Y3000.0000 Z100.0000 E10000.0000
+Recv: echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+Recv: echo:  M204 P2300.0000 R3000.0000 T2300.0000
+Recv: echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_jerk> Y<max_jerk> Z<max_jerk> E<max_jerk>):
+Recv: echo:  M205 B20000.0000 S0.0000 T0.0000 X10.0000 Y10.0000 Z0.3000 E5.0000
+Recv: echo:; Home offset:
+Recv: echo:  M206 X0.0000 Y0.0000 Z0.0000
+Recv: echo:; Auto Bed Leveling:
+Recv: echo:  M420 S0 Z10.0000 ; Leveling OFF
+Recv: echo:  G29 W I0 J0 Z-0.43150
+Recv: echo:  G29 W I1 J0 Z-0.53900
+Recv: echo:  G29 W I2 J0 Z-0.59963
+Recv: echo:  G29 W I3 J0 Z-0.54275
+Recv: echo:  G29 W I4 J0 Z-0.45963
+Recv: echo:  G29 W I0 J1 Z-0.36275
+Recv: echo:  G29 W I1 J1 Z-0.47275
+Recv: echo:  G29 W I2 J1 Z-0.54713
+Recv: echo:  G29 W I3 J1 Z-0.47150
+Recv: echo:  G29 W I4 J1 Z-0.39838
+Recv: echo:  G29 W I0 J2 Z-0.36400
+Recv: echo:  G29 W I1 J2 Z-0.49463
+Recv: echo:  G29 W I2 J2 Z-0.55150
+Recv: echo:  G29 W I3 J2 Z-0.51588
+Recv: echo:  G29 W I4 J2 Z-0.39150
+Recv: echo:  G29 W I0 J3 Z-0.43213
+Recv: echo:  G29 W I1 J3 Z-0.49338
+Recv: echo:  G29 W I2 J3 Z-0.58150
+Recv: echo:  G29 W I3 J3 Z-0.53650
+Recv: echo:  G29 W I4 J3 Z-0.45088
+Recv: echo:  G29 W I0 J4 Z-0.57588
+Recv: echo:  G29 W I1 J4 Z-0.69400
+Recv: echo:  G29 W I2 J4 Z-0.65712
+Recv: echo:  G29 W I3 J4 Z-0.69025
+Recv: echo:  G29 W I4 J4 Z-0.54338
+Recv: echo:; Endstop adjustment:
+Recv: echo:  M666 Z0.0000
+Recv: echo:; Z Auto-Align:
+Recv: echo:  M422 S1 X10.0000 Y107.0000
+Recv: echo:  M422 S2 X204.0000 Y204.0000
+Recv: echo:; Material heatup parameters:
+Recv: echo:  M145 S0 H180.0000 B70.0000 F0
+Recv: echo:  M145 S1 H240.0000 B110.0000 F0
+Recv: echo:; Hotend PID:
+Recv: echo:  M301 P11.2333 I0.5261 D59.9576
+Recv: echo:; Bed PID:
+Recv: echo:  M304 P48.7921 I8.8408 D179.5225
+Recv: echo:; Z-Probe Offset:
+Recv: echo:  M851 X0.0000 Y49.0000 Z-3.5990 ; (mm)
+Recv: echo:; Stepper driver current:
+Recv: echo:  M906 X1200 Y1200
+Recv: echo:; StallGuard threshold:
+Recv: echo:  M914 X60 Y60
+Recv: echo:; Driver stepping mode:
+Recv: ok P15 B3
