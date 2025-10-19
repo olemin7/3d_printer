@@ -1,5 +1,5 @@
-description[de] = \n\n<b>CNC Rules</b>\n
-description[en] = \n\n<b>CNC EAGLE Design Rules</b>\n
+description[de] = \n\n\n<b>CNC Rules</b>\n
+description[en] = \n\n<b>CNC EAGLE Design Rules 10.10.2025</b>\n
 layerSetup = (1*16)
 mtCopper = 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm
 mtIsolate = 1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm
