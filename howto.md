@@ -161,7 +161,7 @@ platformio run -e BIGTREE_SKR_2
 C:\Users\olemi\.platformio\penv\Scripts\platformio.exe run -e STM32F407VG_btt
 
 
-[octoprint]
+# octoprint
 octoprint.org
 https://docs.octoprint.org/en/master/plugins/gettingstarted.html
 
@@ -225,7 +225,7 @@ which will disable "the usual" USB -> Serial -> CTS/DTR, etc -> RESET action
 https://github.com/malnvenshorn/OctoPrint-MetadataPreprocessor/blob/master/octoprint_metadatapreprocessor/__init__.py
 
 =======
-[ocptoprint:action]
+# ocptoprint:action
 beforeHome
 M501;M666 Z0.62
 
@@ -243,10 +243,13 @@ setut from  exe
 set_sys excellon_zeros T
 https://www.youtube.com/watch?v=93y_d55sr5A&ab_channel=MattWestwick
 
-[wifi]
-https://github.com/cilynx/rtl88x2bu
-/boot/config.txt
+# wifi
+
+/boot/firmware/config.txt
 #disable internal wifi
 dtoverlay=disable-wifi 
+
+iwconfig
+
 
 https://github.com/bigtreetech/SKR-2/tree/master/Hardware
