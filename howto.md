@@ -21,8 +21,6 @@ M290 P0 X0 Y0 Z-0.98
 nozzleClean 
 G90;G0 Z10 F1500;G0 X2 Y-10 ;G0 Z1;G91;G1 F50 E15;G0 E-3 F20;G1 Y10 Z1 F500;G90;G0 Z15 F9000;G0 X30 Y30 F9000
 
-plotter
-G92 X0 Y0 Z0
 
 endPrint
 G91;G0 Z+15 F3000;G90;G0 X0 Y216
@@ -89,7 +87,11 @@ Recv: echo:; PID settings:
 Recv: echo:  M301 P15.58 I0.73 D83.28
 Recv: echo:  M304 P52.15 I8.97 D202.22
 
+<<<<<<< HEAD:howto.md
 M106 S128; fan 30%
+=======
+M106 S128; blower fan
+>>>>>>> b22f661 (upd):howto.txt
 M303 C7 E0 S220 U1 ;nozle
 M303 C7 E-1 S85 U1 ;bed
 
@@ -111,7 +113,7 @@ M114; Get Current Position
 M302 P0      ; enable cold extrusion checking
 M302 P1      ; disable cold extrusion checking
 G0 F1000 E100
-M92 E1358
+M92 E1389
 
 https://teachingtechyt.github.io/calibration.html#accel
 
@@ -146,7 +148,7 @@ https://marlinfw.org/docs/basics/troubleshooting.html
 git remote add upstream https://github.com/MarlinFirmware/Marlin.git
 git remote add upstream git@github.com:bigtreetech/Marlin.git
 git fetch upstream
-git merge upstream/2.0.x
+git merge upstream/bugfix-2.1.x
 git difftool upstream/2.0.x 
 git difftool upstream/bugfix-2.1.x
 
@@ -157,8 +159,12 @@ https://marlinfw.org/docs/basics/install_platformio_cli.html
 source deactivate
 source ~/.platformio/penv/bin/activate
 
+<<<<<<< HEAD:howto.md
 platformio run -e BIGTREE_SKR_2
 C:\Users\olemi\.platformio\penv\Scripts\platformio.exe run -e STM32F407VG_btt
+=======
+platformio run -e STM32F407VG_btt
+>>>>>>> b22f661 (upd):howto.txt
 
 
 # octoprint
