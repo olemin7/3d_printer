@@ -10,42 +10,42 @@ Recv: echo:  M92 X160.00 Y160.00 Z1600.00 E1389.00
 Recv: echo:; Max feedrates (units/s):
 Recv: echo:  M203 X300.00 Y300.00 Z5.00 E25.00
 Recv: echo:; Max Acceleration (units/s2):
-Recv: echo:  M201 X3000.00 Y3000.00 Z100.00 E10000.00
+Recv: echo:  M201 X3000.00 Y3000.00 Z100.00 E3000.00
 Recv: echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
 Recv: echo:  M204 P2300.00 R3000.00 T2300.00
 Recv: echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_jerk> Y<max_jerk> Z<max_jerk> E<max_jerk>):
-Recv: echo:  M205 B20000.00 S0.00 T0.00 X10.00 Y10.00 Z0.30 E5.00
+Recv: echo:  M205 B20000.00 S0.00 T0.00 X10.00 Y10.00 Z0.30 E0.50
 Recv: echo:; Home offset:
 Recv: echo:  M206 X0.00 Y0.00 Z0.00
 Recv: echo:; Auto Bed Leveling:
 Recv: echo:  M420 S0 Z10.00 ; Leveling OFF
-Recv: echo:  G29 W I0 J0 Z-0.24437
-Recv: echo:  G29 W I1 J0 Z-0.40688
-Recv: echo:  G29 W I2 J0 Z-0.44125
-Recv: echo:  G29 W I3 J0 Z-0.37563
-Recv: echo:  G29 W I4 J0 Z-0.28875
-Recv: echo:  G29 W I0 J1 Z-0.22312
-Recv: echo:  G29 W I1 J1 Z-0.36313
-Recv: echo:  G29 W I2 J1 Z-0.46813
-Recv: echo:  G29 W I3 J1 Z-0.43313
-Recv: echo:  G29 W I4 J1 Z-0.28437
-Recv: echo:  G29 W I0 J2 Z-0.22750
-Recv: echo:  G29 W I1 J2 Z-0.38313
-Recv: echo:  G29 W I2 J2 Z-0.44688
-Recv: echo:  G29 W I3 J2 Z-0.35375
-Recv: echo:  G29 W I4 J2 Z-0.26938
-Recv: echo:  G29 W I0 J3 Z-0.21625
-Recv: echo:  G29 W I1 J3 Z-0.38937
-Recv: echo:  G29 W I2 J3 Z-0.39250
-Recv: echo:  G29 W I3 J3 Z-0.37063
-Recv: echo:  G29 W I4 J3 Z-0.26625
-Recv: echo:  G29 W I0 J4 Z-0.23312
-Recv: echo:  G29 W I1 J4 Z-0.37937
-Recv: echo:  G29 W I2 J4 Z-0.42813
-Recv: echo:  G29 W I3 J4 Z-0.39062
-Recv: echo:  G29 W I4 J4 Z-0.26625
+Recv: echo:  G29 W I0 J0 Z-0.43438
+Recv: echo:  G29 W I1 J0 Z-0.60625
+Recv: echo:  G29 W I2 J0 Z-0.65875
+Recv: echo:  G29 W I3 J0 Z-0.58562
+Recv: echo:  G29 W I4 J0 Z-0.43937
+Recv: echo:  G29 W I0 J1 Z-0.41625
+Recv: echo:  G29 W I1 J1 Z-0.55000
+Recv: echo:  G29 W I2 J1 Z-0.64687
+Recv: echo:  G29 W I3 J1 Z-0.58938
+Recv: echo:  G29 W I4 J1 Z-0.43750
+Recv: echo:  G29 W I0 J2 Z-0.40062
+Recv: echo:  G29 W I1 J2 Z-0.56375
+Recv: echo:  G29 W I2 J2 Z-0.64125
+Recv: echo:  G29 W I3 J2 Z-0.59375
+Recv: echo:  G29 W I4 J2 Z-0.43375
+Recv: echo:  G29 W I0 J3 Z-0.35438
+Recv: echo:  G29 W I1 J3 Z-0.58063
+Recv: echo:  G29 W I2 J3 Z-0.62250
+Recv: echo:  G29 W I3 J3 Z-0.58000
+Recv: echo:  G29 W I4 J3 Z-0.42625
+Recv: echo:  G29 W I0 J4 Z-0.42625
+Recv: echo:  G29 W I1 J4 Z-0.57125
+Recv: echo:  G29 W I2 J4 Z-0.60500
+Recv: echo:  G29 W I3 J4 Z-0.55000
+Recv: echo:  G29 W I4 J4 Z-0.39937
 Recv: echo:; Endstop adjustment:
-Recv: echo:  M666 Z0.10
+Recv: echo:  M666 Z-0.10
 Recv: echo:; Z Auto-Align:
 Recv: echo:  M422 S1 X10.00 Y107.00
 Recv: echo:  M422 S2 X204.00 Y204.00
@@ -53,11 +53,11 @@ Recv: echo:; Material heatup parameters:
 Recv: echo:  M145 S0 H180.00 B70.00 F0
 Recv: echo:  M145 S1 H240.00 B110.00 F0
 Recv: echo:; Hotend PID:
-Recv: echo:  M301 P21.77 I1.39 D85.32
+Recv: echo:  M301 P17.02 I1.04 D69.80
 Recv: echo:; Bed PID:
-Recv: echo:  M304 P48.79 I8.84 D179.52
+Recv: echo:  M304 P56.52 I10.87 D195.93
 Recv: echo:; Z-Probe Offset:
-Recv: echo:  M851 X0.00 Y49.00 Z-3.21 ; (mm)
+Recv: echo:  M851 X0.00 Y49.00 Z-3.62 ; (mm)
 Recv: echo:; Stepper driver current:
 Recv: echo:  M906 X1200 Y1200 Z1000
 Recv: echo:  M906 I1 Z1000

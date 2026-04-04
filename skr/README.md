@@ -60,7 +60,7 @@ G1 Z+15 E-2 F9000 ;move Z up a bit and retract filament even more
 M118 //action:endPrint
 M84 ;steppers off
 
-[bed level]
+# bed level
 M150 R0 U0 B255 P255
 M80
 M501
@@ -78,7 +78,8 @@ G29 T1;start bed level
 M666 Z
 M500;eeprom save
 
-[calibration]
+# calibration
+
 M85 S6000; inactive timeout
 =======
 m501;load
@@ -87,11 +88,8 @@ Recv: echo:; PID settings:
 Recv: echo:  M301 P15.58 I0.73 D83.28
 Recv: echo:  M304 P52.15 I8.97 D202.22
 
-<<<<<<< HEAD:howto.md
+## temperature
 M106 S128; fan 30%
-=======
-M106 S128; blower fan
->>>>>>> b22f661 (upd):howto.txt
 M303 C7 E0 S220 U1 ;nozle
 M303 C7 E-1 S85 U1 ;bed
 
@@ -100,7 +98,7 @@ M500 ;save
 m914 X60 Y60 ;sensorless
 M906 X1200 Y1200;Stepper driver current
 
-[calibration size]
+## calibration size
 G91 ; Set all axes to relative
 G28 X
 M119; Endstop States
@@ -144,7 +142,7 @@ https://marlinfw.org/docs/basics/troubleshooting.html
 #define ST7920_DELAY_3 DELAY_NS(50)
 
 
-[build]
+# get source
 git remote add upstream https://github.com/MarlinFirmware/Marlin.git
 git remote add upstream git@github.com:bigtreetech/Marlin.git
 git fetch upstream
@@ -156,15 +154,14 @@ https://docs.platformio.org/en/latest/core/installation.html#super-quick-mac-lin
 https://marlinfw.org/docs/basics/install_platformio_cli.html
 
 
+# build
 source deactivate
 source ~/.platformio/penv/bin/activate
 
-<<<<<<< HEAD:howto.md
-platformio run -e BIGTREE_SKR_2
 C:\Users\olemi\.platformio\penv\Scripts\platformio.exe run -e STM32F407VG_btt
-=======
+
 platformio run -e STM32F407VG_btt
->>>>>>> b22f661 (upd):howto.txt
+
 
 
 # octoprint
@@ -182,9 +179,15 @@ pip install "https://github.com/Sebclem/OctoPrint-SimpleEmergencyStop/archive/ma
 pip install "https://github.com/benlye/OctoPrint-ActionCommandsPlugin/archive/master.zip"
 pip install "https://github.com/costas-basdekis/MarlinGcodeDocumentation/archive/master.zip"
 pip install "https://github.com/quanticchaos/OctoPrint-Webcamsb/archive/master.zip"
-pip3 install marlin-binary-protocol
 
-[multicam]
+## flash
+precondition
+ssh olemin@
+source ~/oprint/bin/activate
+pip install heatshrink2
+pip install marlin-binary-protocol --no-deps
+
+## multicam
 https://community.octoprint.org/t/setting-up-multiple-webcams-in-octopi-the-right-way/32669
 
 $  ls  /dev/v4l/by-id/
@@ -204,7 +207,7 @@ sudo systemctl enable webcamd2
 sudo service webcamd2 status
 sudo vim /etc/haproxy/haproxy.cfg
 
-[dev plugin]
+## dev plugin
 bootstarp2
 sudo minicom -b 115200 -D /dev/ttyUSB0
 export PI_IP=192.168.1.246
@@ -227,6 +230,7 @@ stty -F /dev/ttyACM0 -hupcl
 which will disable "the usual" USB -> Serial -> CTS/DTR, etc -> RESET action
 3275 
 
+
 [dev]
 https://github.com/malnvenshorn/OctoPrint-MetadataPreprocessor/blob/master/octoprint_metadatapreprocessor/__init__.py
 
@@ -244,11 +248,6 @@ G90;G0 Z10 F1500;G0 X0 Y-18;G0 Z4
 nozzleClean 
 G91;G1 F50 E15;G0 E-3 F20;G1 Y10 F500;G90;G0 Z10 F9000;G0 X30 Y30 F9000
 
-[flatcam]
-setut from  exe
-set_sys excellon_zeros T
-https://www.youtube.com/watch?v=93y_d55sr5A&ab_channel=MattWestwick
-
 # wifi
 
 /boot/firmware/config.txt
@@ -259,3 +258,10 @@ iwconfig
 
 
 https://github.com/bigtreetech/SKR-2/tree/master/Hardware
+
+# BOM 3d printer
+
+2x T8 pitch 2mm leed 4mm
+4x 2gt 20T iddler no teeth
+6x 2gt 20T iddler with teeth
+2x 1550mm GT2 belt 6mm
